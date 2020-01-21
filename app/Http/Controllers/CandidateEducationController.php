@@ -7,77 +7,70 @@ use Illuminate\Http\Request;
 
 class CandidateEducationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+
+        $candidateEducation= new candidateEducation();
+
+        $this->validate($request,[
+            'degree'=>'required',
+            'school_name'=> 'required',
+            'city'=> 'required',
+            'field_of_study'=> 'required',
+        ]);
+
+        $candidateEducation->degree=$request->degree;
+        $candidateEducation->school_type=$request->school_type;
+        $candidateEducation->school_name=$request->school_name;
+        $candidateEducation->city=$request->city;
+        $candidateEducation->country=$request->country;
+        $candidateEducation->state=$request->state;
+        $candidateEducation->enrolldate=$request->enrolldate;
+        $candidateEducation->still_studying=$request->still_studying;
+        $candidateEducation->grad_date=$request->grad_date;
+        $candidateEducation->exp_graddate=$request->exp_graddate;
+        $candidateEducation->is_graduated=$request->is_graduated;
+        $candidateEducation->lastenrollyear=$request->lastenrollyear;
+        $candidateEducation->future_study=$request->future_study;
+        $candidateEducation->field_of_study=$request->field_of_study;
+
+        $candidateEducation->save();
+
+        return view('/welcome');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\candidateEducation  $candidateEducation
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(candidateEducation $candidateEducation)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\candidateEducation  $candidateEducation
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(candidateEducation $candidateEducation)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\candidateEducation  $candidateEducation
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, candidateEducation $candidateEducation)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\candidateEducation  $candidateEducation
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(candidateEducation $candidateEducation)
     {
         //

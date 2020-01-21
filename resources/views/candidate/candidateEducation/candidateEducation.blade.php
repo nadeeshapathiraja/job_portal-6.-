@@ -13,8 +13,8 @@
   {{-- Content --}}
     <div class="container">
         <h1>Candidate Education</h1>
-        {{-- action="{{ route('candidateeducations.store') }}" --}}
-        <form method="post">
+        
+        <form method="post" action="/saveEducation">
             
             <div class="form-group">
                 <label for="degree">Degree:</label>
@@ -86,7 +86,8 @@
                 <input type="text" class="form-control" name="field_of_study"/>
             </div>
             
-                <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-warning">Clear</button>
         </form>
   
     </div>

@@ -13,8 +13,19 @@
   {{-- Content --}}
     <div class="container">
       <h1>Candidate Profile</h1>
-      {{-- action="{{ route('candidate_profiles.store') }}" --}}
-        <form method="post" enctype="multipart/form-data">
+
+      {{-- Display Errors --}}
+      @foreach($errors->all() as $error)
+        <div class="alert alert-danger"  role="alert">
+          {{$error}}
+        </div>
+      @endforeach
+
+        <form method="post" enctype="multipart/form-data" action="/saveCandidate">
+
+          {{-- For secure data --}}
+          {{csrf_field()}} 
+
           
           {{-- Image --}}
           {{-- <div class="form-group">
