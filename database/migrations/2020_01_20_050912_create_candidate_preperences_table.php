@@ -14,14 +14,15 @@ class CreateCandidatePreperencesTable extends Migration
     public function up()
     {
         Schema::create('candidate_preperences', function (Blueprint $table) {
+
             $table->increments('candidate_preference_id');
             $table->timestamps();
-            //$table->integer('candidate_profile_id');;
-            $table->text('specialization');;
-            $table->string('location_country');
-            $table->string('location_state');
-            $table->string('salary_currency');
-            $table->string('salary_amount');
+            $table->text('specialization')->nullable();
+            $table->string('location_country')->nullable();
+            $table->string('location_state')->nullable();
+            $table->string('salary_currency')->nullable();
+            $table->string('salary_amount')->nullable();
+            
         });
     }
 

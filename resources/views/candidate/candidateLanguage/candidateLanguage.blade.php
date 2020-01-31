@@ -13,8 +13,11 @@
   {{-- Content --}}
     <div class="container">
         <h1>Candidate Language</h1>
-        {{-- action="{{ route('candidate_languages.store') }}" --}}
-        <form method="post" >
+        
+        <form method="post" action="/saveLanguage" >
+            
+            {{-- For secure data --}}
+            {{csrf_field()}}
 
             <div class="form-group">
                 <label for="language_code">Language Code:</label>
@@ -36,9 +39,8 @@
                 <input type="text" class="form-control" name="default"/>
             </div>
 
-
-
-            <button type="submit" class="btn btn-primary-outline">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-warning">Clear</button>
         </form>
     </div>
 

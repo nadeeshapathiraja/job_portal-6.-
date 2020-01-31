@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('userType')->default('c'); //c-candidate,a-agent,admin,e-employee
+            $table->string('userType')->default('Candidate'); // 4 User Types Candidate,Agent,Admin,Employee
             $table->rememberToken();
             $table->timestamps();
         });

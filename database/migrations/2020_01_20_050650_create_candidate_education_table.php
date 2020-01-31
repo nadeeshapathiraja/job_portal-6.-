@@ -17,20 +17,20 @@ class CreateCandidateEducationTable extends Migration
             
             $table->increments('candidate_educ_id');
             $table->timestamps();
-            $table->string('degree');
-            $table->string('school_type');
-            $table->string('school_name');
-            $table->string('city');
-            $table->string('country');
-            $table->string('state');
-            $table->dateTime('enrolldate');
-            $table->string('still_studying');
-            $table->dateTime('grad_date');
-            $table->dateTime('exp_graddate');
-            $table->string('is_graduated');
-            $table->dateTime('lastenrollyear');
-            $table->string('future_study');
-            $table->string('field_of_study');
+            $table->string('degree')->nullable();
+            $table->string('school_type')->nullable();
+            $table->string('school_name')->nullable();
+            $table->string('city')->nullable();
+            $table->string('country')->nullable();
+            $table->string('state')->nullable();
+            $table->dateTime('enrolldate')->nullable();
+            $table->string('still_studying')->nullable();
+            $table->dateTime('grad_date')->nullable();
+            $table->dateTime('exp_graddate')->nullable();
+            $table->string('is_graduated')->nullable();
+            $table->dateTime('lastenrollyear')->nullable();
+            $table->string('future_study')->nullable();
+            $table->string('field_of_study')->nullable();
         });
     }
 

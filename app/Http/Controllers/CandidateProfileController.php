@@ -72,6 +72,7 @@ class CandidateProfileController extends Controller
 
         // get data for one veriabal use array we can view use this variable
         $allCandidates=candidateProfile::all();
+        return view('/viewCandidate')->with('viewCandidateLists',$allCandidates);
         
         // return or redirect another page use redirect or view
         //return redirect()->back(); or use
@@ -81,6 +82,7 @@ class CandidateProfileController extends Controller
     
     public function show(candidateProfile $candidateProfile)
     {
+       
         
     }
 

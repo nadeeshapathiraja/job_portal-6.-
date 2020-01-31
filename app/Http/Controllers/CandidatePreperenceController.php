@@ -7,77 +7,56 @@ use Illuminate\Http\Request;
 
 class CandidatePreperenceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        // make object use model
+        $candidatePreperence=new candidatePreperence();
+
+        $candidatePreperence->specialization=$request->specialization;
+        $candidatePreperence->location_country=$request->location_country;
+        $candidatePreperence->location_state=$request->location_state;
+        $candidatePreperence->salary_currency=$request->salary_currency;
+        $candidatePreperence->salary_amount=$request->salary_amount;
+
+        $candidatePreperence->save();
+
+        // redirct another page
+        return view('/welcome');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\candidatePreperence  $candidatePreperence
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(candidatePreperence $candidatePreperence)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\candidatePreperence  $candidatePreperence
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(candidatePreperence $candidatePreperence)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\candidatePreperence  $candidatePreperence
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, candidatePreperence $candidatePreperence)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\candidatePreperence  $candidatePreperence
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(candidatePreperence $candidatePreperence)
     {
         //

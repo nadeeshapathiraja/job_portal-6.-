@@ -19,9 +19,6 @@ Route::get('/candidatePreference', function () {
 Route::get('/candidateProfile', function () {
     return view('candidate/candidateProfile/candidateProfile');
 });
-Route::get('/viewCandidate', function () {
-    return view('candidate/viewCandidateList');
-});
 Route::get('/candidateHome', function () {
     return view('candidate/index');
 });
@@ -36,3 +33,23 @@ Auth::routes();
 Route::post('/saveCandidate', 'CandidateProfileController@store');
 
 Route::post('/saveEducation', 'CandidateEducationController@store');
+
+Route::post('/saveLanguage', 'CandidateLanguageController@store');
+
+Route::post('/savePreperence', 'CandidatePreperenceController@store');
+
+Route::post('/saveWorkExp', 'CandidateWorkExpController@store');
+
+
+//Mage views
+Route::get('/viewCandidate', function () {
+    $allCandidates=App\candidateProfile::all();
+    return view('candidate/viewCandidateList')->with('viewCandidateLists',$allCandidates);
+    //return view('candidate/viewCandidateList');
+});
+Route::get('/viewUserList', function () {
+    $allUsers=App\User::all();
+    return view('auth/viewUserList')->with('viewUserLists',$allUsers);
+});
+
+

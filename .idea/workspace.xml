@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a4dbe73-0b50-4662-9e68-cc4d2e73736e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateLanguageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateLanguageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidatePreperenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidatePreperenceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateWorkExpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateWorkExpController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_20_050650_create_candidate_education_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_20_050650_create_candidate_education_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_20_050837_create_candidate_languages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_20_050837_create_candidate_languages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_20_050912_create_candidate_preperences_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_20_050912_create_candidate_preperences_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_20_050939_create_candidate_work_exps_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_20_050939_create_candidate_work_exps_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidateEducation/candidateEducation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidateEducation/candidateEducation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidateLanguage/candidateLanguage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidateLanguage/candidateLanguage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidatePreperence/candidatePreperence.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidatePreperence/candidatePreperence.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidateWorkExp/candidateWorkExp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidateWorkExp/candidateWorkExp.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1X8ymudfUVTR2Jm0VyFAr21ywMq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a4dbe73-0b50-4662-9e68-cc4d2e73736e" name="Default Changelist" comment="" />
+      <created>1580442189514</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580442189514</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580442245718">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580442245718" />
+  </component>
+</project>

@@ -14,13 +14,14 @@ class CreateCandidateLanguagesTable extends Migration
     public function up()
     {
         Schema::create('candidate_languages', function (Blueprint $table) {
+
             $table->increments('candidate_lang_id');
             $table->timestamps();
-            //$table->integer('candidate_profile_id');
-            $table->string('language_code');
-            $table->string('spoken_level');
-            $table->string('written_level');
-            $table->string('default');
+            $table->string('language_code')->nullable();
+            $table->string('spoken_level')->nullable();
+            $table->string('written_level')->nullable();
+            $table->string('default')->nullable();
+            
         });
     }
 

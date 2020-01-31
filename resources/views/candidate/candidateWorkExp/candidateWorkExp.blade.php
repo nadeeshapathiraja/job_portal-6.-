@@ -14,8 +14,11 @@
         <div class="container">
             
             <h1>Candidate Work Experence</h1>
-            {{-- action="{{ route('candidateworkexps.store') }}" --}}
-            <form method="post">
+
+            <form method="post" action="/saveWorkExp">
+
+                {{-- For secure data --}}
+                {{csrf_field()}} 
 
                 <div class="form-group">
                     <label for="employername">Employer Name:</label>

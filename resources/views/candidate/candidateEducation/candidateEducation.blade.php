@@ -15,6 +15,9 @@
         <h1>Candidate Education</h1>
         
         <form method="post" action="/saveEducation">
+
+            {{-- For secure data --}}
+            {{csrf_field()}}
             
             <div class="form-group">
                 <label for="degree">Degree:</label>

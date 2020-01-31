@@ -13,8 +13,11 @@
   {{-- Content --}}
     <div class="container">
         <h1>Candidate Preperences</h1>
-        {{-- action="{{ route('candidatepreferences.store') }}" --}}
-        <form method="post">
+        
+        <form method="post" action="/savePreperence">
+
+            {{-- For secure data --}}
+            {{csrf_field()}}
             
             <div class="form-group">
                 <label for="specialization">Specialization:</label>
@@ -42,7 +45,9 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary-outline">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-warning">Clear</button>
+            
         </form>
     </div>
 

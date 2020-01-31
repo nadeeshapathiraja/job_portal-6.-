@@ -7,77 +7,53 @@ use Illuminate\Http\Request;
 
 class CandidateLanguageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $candidateLanguage= new candidateLanguage();
+
+        $candidateLanguage->language_code=$request->language_code;
+        $candidateLanguage->spoken_level=$request->spoken_level;
+        $candidateLanguage->written_level=$request->written_level;
+        $candidateLanguage->default=$request->default;
+
+        $candidateLanguage->save();//save candidate Language
+
+        // redirect another Page can change 
+        return view('/welcome');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\candidateLanguage  $candidateLanguage
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(candidateLanguage $candidateLanguage)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\candidateLanguage  $candidateLanguage
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(candidateLanguage $candidateLanguage)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\candidateLanguage  $candidateLanguage
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, candidateLanguage $candidateLanguage)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\candidateLanguage  $candidateLanguage
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(candidateLanguage $candidateLanguage)
     {
         //
