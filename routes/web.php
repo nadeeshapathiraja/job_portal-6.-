@@ -41,7 +41,7 @@ Route::post('/savePreperence', 'CandidatePreperenceController@store');
 Route::post('/saveWorkExp', 'CandidateWorkExpController@store');
 
 
-//Mage views
+//Make views
 Route::get('/viewCandidate', function () {
     $allCandidates=App\candidateProfile::all();
     return view('candidate/viewCandidateList')->with('viewCandidateLists',$allCandidates);
@@ -52,4 +52,13 @@ Route::get('/viewUserList', function () {
     return view('auth/viewUserList')->with('viewUserLists',$allUsers);
 });
 
+
+//Make delete
+Route::get('/deleteCandidate/{id}' ,'CandidateProfileController@destroy');
+
+
+//make Update
+//user permission
+Route::get('/giveAccess/{id}','UserController@updateAccess');
+Route::get('/cancleAccess/{id}','UserController@updateNotAccess');
 

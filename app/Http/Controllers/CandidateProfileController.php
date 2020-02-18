@@ -8,19 +8,19 @@ use Illuminate\Http\Request;
 
 class CandidateProfileController extends Controller
 {
-    
+
     public function index()
     {
-        
+
     }
 
-    
+
     public function create()
     {
-    
+
     }
 
-    
+
     public function store(Request $request)
     {
         //dd($request->all());echo data for user
@@ -73,34 +73,36 @@ class CandidateProfileController extends Controller
         // get data for one veriabal use array we can view use this variable
         $allCandidates=candidateProfile::all();
         return view('/viewCandidate')->with('viewCandidateLists',$allCandidates);
-        
+
         // return or redirect another page use redirect or view
         //return redirect()->back(); or use
         return view('/welcome');
     }
 
-    
+
     public function show(candidateProfile $candidateProfile)
     {
-       
-        
+
+
     }
 
-    
+
     public function edit(candidateProfile $candidateProfile)
     {
-        
+
     }
 
-    
+
     public function update(Request $request, candidateProfile $candidateProfile)
     {
-        
+
     }
 
-    
-    public function destroy(candidateProfile $candidateProfile)
+
+    public function destroy($id)
     {
-        
+        $candidateDeleteProfile=candidateProfile::find($id);
+        $candidateDeleteProfile->delete();
+        return redirect()->back();
     }
 }

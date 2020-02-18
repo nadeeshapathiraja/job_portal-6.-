@@ -35,13 +35,13 @@
                             <td>{{$viewCandidateList->gender}}</td>
                             <td>{{$viewCandidateList->prefered_category}}</td>
                             <td>
-                                <button type="button" class="btn btn-success">View</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <a href="/viewCandidate/{{$viewCandidateList->candidate_profile_id}}" class="btn btn-success">View</a>
+                                <a href="/deleteCandidate/{{$viewCandidateList->candidate_profile_id}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     @endforeach
-                    
-        
+
+
                 </table>
             </div>
         </div>
@@ -50,6 +50,6 @@
         <header class="row">
             @include('common.footer')
         </header>
-        
+
     </body>
 </html>

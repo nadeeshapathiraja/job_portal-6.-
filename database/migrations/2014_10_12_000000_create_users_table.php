@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('userType')->default('Candidate'); // 4 User Types Candidate,Agent,Admin,Employee
+            $table->string('userApprove')->default('0');//default user not approve
             $table->rememberToken();
             $table->timestamps();
         });

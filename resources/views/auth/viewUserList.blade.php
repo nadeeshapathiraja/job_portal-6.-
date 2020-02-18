@@ -18,7 +18,10 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>User Type</th>
+                        <th>Approvel</th>
                         <th>Action</th>
+                        <th>Approvel Action</th>
+
                     </tr>
 
                     @foreach($viewUserLists as $viewUserList)
@@ -29,13 +32,28 @@
                             <td>{{$viewUserList->email}}</td>
                             <td>{{$viewUserList->userType}}</td>
                             <td>
+                                @if($viewUserList->userApprove)
+                                    <button type="button" class="btn btn-outline-info">Approved User</button>
+                                @else
+                                    <button type="button" class="btn btn-outline-warning">Not Approved User</button>
+                                @endif
+                            </td>
+                            <td>
                                 <button type="button" class="btn btn-success">View</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </td>
+                            <td>
+                                @if(!$viewUserList->userApprove)
+                                <a href="/giveAccess/{{$viewUserList->id}}" class="btn btn-primary">Give Access For User</a>
+                                @else
+                                <a href="/cancleAccess/{{$viewUserList->id}}" class="btn btn-warning">Give Access For User</a>
+                                @endif
+
+                            </td>
                         </tr>
                     @endforeach
-                    
-        
+
+
                 </table>
             </div>
         </div>
@@ -44,6 +62,6 @@
         <header class="row">
             @include('common.footer')
         </header>
-        
+
     </body>
 </html>
