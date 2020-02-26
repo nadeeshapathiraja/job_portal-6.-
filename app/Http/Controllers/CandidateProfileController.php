@@ -99,10 +99,8 @@ class CandidateProfileController extends Controller
     }
 
 
-    public function destroy($id)
+    public function destroy(candidateProfile $candidateProfile)
     {
-        $candidateDeleteProfile=candidateProfile::find($id);
-        $candidateDeleteProfile->delete();
-        return redirect()->back();
+
     }
 }

@@ -26,5 +26,20 @@ class UserController extends Controller
         return redirect()->back();
 
     }
+    public function destroy($id)
+    {
+        // $candidateDeleteProfile=User::find($id);
+        // $candidateDeleteProfile->delete($id);
+        // return redirect()->back();
+
+        $post =User::where('id',$id)->first();
+
+        if ($post != null) {
+            $post->delete();
+            return redirect()->back()->with(['message'=> 'Successfully deleted!!']);
+        }
+
+        return redirect()->back()->with(['message'=> 'Wrong ID!!']);
+    }
 
 }

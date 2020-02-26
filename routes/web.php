@@ -47,6 +47,7 @@ Route::get('/viewCandidate', function () {
     return view('candidate/viewCandidateList')->with('viewCandidateLists',$allCandidates);
     //return view('candidate/viewCandidateList');
 });
+
 Route::get('/viewUserList', function () {
     $allUsers=App\User::all();
     return view('auth/viewUserList')->with('viewUserLists',$allUsers);
@@ -54,7 +55,7 @@ Route::get('/viewUserList', function () {
 
 
 //Make delete
-Route::get('/deleteCandidate/{id}' ,'CandidateProfileController@destroy');
+Route::get('/deleteCandidate/{id}' ,'UserController@destroy');
 
 
 //make Update
@@ -62,3 +63,15 @@ Route::get('/deleteCandidate/{id}' ,'CandidateProfileController@destroy');
 Route::get('/giveAccess/{id}','UserController@updateAccess');
 Route::get('/cancleAccess/{id}','UserController@updateNotAccess');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

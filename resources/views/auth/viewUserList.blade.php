@@ -40,7 +40,7 @@
                             </td>
                             <td>
                                 <button type="button" class="btn btn-success">View</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <a href = '/deleteCandidate/{{$viewUserList->id}}' class="btn btn-danger">Delete</a>
                             </td>
                             <td>
                                 @if(!$viewUserList->userApprove)
